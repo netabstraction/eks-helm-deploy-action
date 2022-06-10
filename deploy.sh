@@ -39,7 +39,7 @@ fi
 # Helm upgrade
 ####################
 
-UPGRADE_COMMAND="helm upgrade -i --timeout ${TIMEOUT}"
+UPGRADE_COMMAND="helm upgrade -i --force --timeout ${TIMEOUT}"
 for config_file in ${DEPLOY_CONFIG_FILES//,/ }
 do
     UPGRADE_COMMAND="${UPGRADE_COMMAND} -f ${config_file}"
